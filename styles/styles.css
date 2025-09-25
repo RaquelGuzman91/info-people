@@ -1166,7 +1166,7 @@ footer #ir_arriba_boton button:hover{
     }
     .banner-main{
     width: 100%;
-    background-image: url('/images/oficina-recursos-humanos.jpg');
+    background-image: url('../images/oficina-recursos-humanos.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
