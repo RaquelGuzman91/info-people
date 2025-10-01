@@ -42,9 +42,10 @@ header .blue{
 }
 header .nav{
     background-color: #1f75aa;
+    width: 85%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 0 2rem;
 }
@@ -57,7 +58,6 @@ header .nav li a{
     font-size: .9rem;
     font-weight: 100;
     text-transform: uppercase;
-    padding: 0 1.5rem;
 }
 header .nav li a:hover{
     color: #ffda0b;
@@ -78,171 +78,21 @@ header .icon img{
     width: 240px;
 }
 /*----- nav-icono-responsive    ----*/
+header .hamburger{
+    display: none;
+    z-index: 20;
+    position: absolute;
+    right: .5rem;
+}
+header .nav .nav-icon{
+    display: none;
+}
 
 /*-----------------------------------*/
-header nav{
-    display: none;
-    position: absolute;
-    right: 0;
-    width: 80%;
-    top: 0;
-    z-index: 1000;
-}
-header nav .container {
-  max-width: 1050px;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  top: 0;
-    z-index: 1000;
 
-}
 
-header nav .navbar {
-  width: 100%;
-  height: 100%;
 
-}
 
-header nav .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-header nav .navbar .menu-items {
-  display: flex;
-}
-
-header nav .navbar .nav-container li {
-  list-style: none;
-}
-
-header nav .navbar .nav-container a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 100;
-  font-size: 1.2rem;
-  padding: 0.5rem;
-}
-
-header nav .navbar .nav-container a:hover{
-    font-weight: bolder;
-}
-header nav .nav-container {
-  display: block;
-  position: relative;
-  height: 100%;
-   
-}
-header nav .nav-container .checkbox {
-  position: absolute;
-  display: block;
-  height: 50px;
-  width: 50px;
-  top: 1.5rem;
-    right: 1.5rem;
-  z-index: 5;
-  opacity: 0;
-  cursor: pointer;
-}
-header nav .nav-container .hamburger-lines {
-  display: block;
-  height: 26px;
-  width: 32px;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  z-index: 2000;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-header nav .nav-container .hamburger-lines .line {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: #fff;
-}
-
-header nav .nav-container .hamburger-lines .line1 {
-  transform-origin: 0% 0%;
-  transition: transform 0.4s ease-in-out;
-}
-
-header nav .nav-container .hamburger-lines .line2 {
-  transition: transform 0.2s ease-in-out;
-}
-
-header nav .nav-container .hamburger-lines .line3 {
-  transform-origin: 0% 100%;
-  transition: transform 0.4s ease-in-out;
-}
-header nav .navbar .menu-items {
-  padding-top: 70px;
-  background: #1f75aa;
-  height: 300vh;
-  width: 100%;
-  transform: translate(150%);   
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  padding: 3rem;
-  transition: transform 0.5s ease-in-out;
-  position: relative;
-
-}
-
-header nav .navbar .menu-items li {
-  margin-bottom: 1.2rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-header nav .navbar .menu-items .info{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 0px;
-  
-}
-header nav .navbar .menu-items hr{
-    border: .5px solid #ffffff46;
-}
-header nav .navbar .menu-items  .info span {
-    display: flex;
-}
-
-header nav .navbar .menu-items  .info span i{
-    color: white;
-    font-size: 2rem;
-}
-header nav .navbar .menu-items  .info span a{
-    font-size: 1rem;
-}
-header nav .navbar .menu-items .links-networks{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-header nav .nav-container input[type="checkbox"]:checked ~ .menu-items {
-  transform: translateX(0);
-}
-
-header nav .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-  transform: rotate(45deg);
-}
-
-header nav .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-  transform: scaleY(0);
-}
-
-header nav .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-  transform: rotate(-45deg);
-}
 
 /*-------   nav-responsive      -------*/
 
@@ -1047,7 +897,7 @@ footer #ir_arriba_boton button{
     background: none;
     border: none;
     transition: all .6s;
-    z-index: 100;
+    z-index: 50;
     display: none;
 }
 footer #ir_arriba_boton button i{
@@ -1085,10 +935,8 @@ footer #ir_arriba_boton button:hover{
     header .blue{
         width: 80%;
     }
-}
-
-@media (max-width:815px){
-    header .nav li a{
+    header .nav{
+        width: 100%;
         padding: 0 1rem;
     }
 }
@@ -1100,19 +948,52 @@ footer #ir_arriba_boton button:hover{
     header .blue{
         width: 100%;
     }
+    /*------*/
     header .blue .nav{
-        display: none;
-    }
-    header nav{
         display: flex;
-
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 5rem;
+        height: 100dvh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: .4s ease-in-out;
     }
+    header .blue .nav .menu_item{
+        padding-bottom: 1.5rem;    
+    }
+    header .blue .nav .menu_item .menu_link{
+        font-size: 1.5rem;
+    }
+    header .blue .nav.is-active{
+        transform: translateX(0);
+    }
+    header .hamburger{
+        display: block;
+        
+    }
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+    background-color: white !important;
+    }
+    header .nav .nav-icon{
+        display: flex;
+        width: 90%;
+        padding-top: 2rem;
+        justify-content: space-between;
+    }
+    header .nav .nav-icon li a{
+        font-size: 1.5rem;
+    }
+
 }
 /*--------*/
 @media(max-width: 971px){
-    header .nav li a{
-    padding: 0 .9rem;
-}
  header .white{
         width: 35%;
     }
@@ -1121,9 +1002,6 @@ footer #ir_arriba_boton button:hover{
     }
 }
 @media (max-width: 829px){
-    header .nav li a{
-    padding: 0 .5rem;
-}
     header .white{
         width: 40%;
     }
@@ -1160,39 +1038,42 @@ footer #ir_arriba_boton button:hover{
 }
 
 /*----  banner-main-responsive  ----*/
-@media (max-width:500px){
+@media (max-width:600px){
     .banner-main video{
         display: none;
     }
     .banner-main{
     width: 100%;
-    background-image: url('../images/oficina-recursos-humanos.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .banner-main .container-main{
+    width: 100%;
+    display: flex;
+    background-image: url('../images/index-main.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    padding: 2rem 0px;
-    }
-    .banner-main .container-main h2{
-    font-size: 2rem;
-    }
-    .banner-main .container-main p{
-        padding: .5rem .5rem;
-    }
-    .banner-main .container-main a i{
-        padding: .5rem 0px;
-    } 
-    .banner-main .container-main{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 20;
-    color: white;
+    top: 0;
+    padding: .7rem;
     }
-
+    .banner-main .container-main h2{
+    font-size: 2rem;
+    color: #144c68;
+    padding-top: 2rem;
+    }
+    .banner-main .container-main p{
+        padding: .5rem 0px;
+        color: #1f75aa;
+    }
+    .banner-main .container-main .arrow-bottom i{
+        padding: .5rem;
+    }
+    
 }
 
 

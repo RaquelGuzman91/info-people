@@ -10,13 +10,18 @@
     <link rel="icon" type="image/x-icon" href="images/x-icon.png">
     <link rel="stylesheet" href="styles/personal.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/hamburgers-master/dist/hamburgers.css">
-    
+    <!-- libreria hamburger css     -->
+     <link href="dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 <body>
     
      <!-- barra de navegacion    -->
-    <header>
+    <header class="header">
         <article class="white">
             <div class="icon">
                 <img src="images/info-of-people-logo.png" alt="">
@@ -24,61 +29,27 @@
         </article>
         <article class="blue">
             <ul class="nav">
-                <li><a class="desplazar" href="index.html#servicios">servicios</a></li>
-                <li><a class="desplazar" href="index.html#nosotros">nosotros</a></li>
-                <li><a class="desplazar" href="index.html#proyectos">proyectos</a></li>
-                <li><a class="desplazar" href="index.html#clientes">clientes</a></li>
-                <li><a class="desplazar" href="index.html#contacto">contacto</a></li>
+                <li class="menu_item"><a class="desplazar menu_link" class="desplazar" href="index.html#servicios">servicios</a></li>
+                <li class="menu_item"><a class="desplazar menu_link" class="desplazar" href="index.html#nosotros">nosotros</a></li>
+                <li class="menu_item"><a class="desplazar menu_link" class="desplazar" href="index.html#proyectos">proyectos</a></li>
+                <li class="menu_item"><a class="desplazar menu_link" class="desplazar" href="index.html#clientes">clientes</a></li>
+                <li class="menu_item"><a class="desplazar menu_link" class="desplazar" href="index.html#contacto">contacto</a></li>
+                <ul class="nav-icon">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                </ul>
             </ul>
         </article>
 
-
         <!-------       nav-links responsive    ---->
-         <nav>
-        <div class="navbar">
-          <div class="container nav-container">
-              <input class="checkbox" type="checkbox" name="" id="" />
-              <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-              </div>  
-            
-            <div class="menu-items">
-              
-              <li><a class="desplazar" href="#servicios">servicios</a></li>
-              <hr>
-              <li><a class="desplazar" href="#nosotros">nosotros</a></li>
-              <hr>
-              <li><a class="desplazar" href="#proyectos">proyectos</a></li>
-              <hr>
-              <li><a class="desplazar" href="#">clientes</a></li>
-              <hr>
-              <li><a class="desplazar" href="#contacto">contacto</a></li>
-              <hr>
-
-                <div class="info">
-                    <span>
-                        <i class="ri-mail-open-fill"></i><a href="#">lorem@loremgt.com</a>
-                    </span>
-                    <span>
-                        <i class="ri-phone-line"></i><a href="#">telefono: (502+) 5597 - 2311</a>
-                    </span>
-                    <span>
-                        <i class="ri-map-pin-2-fill"></i><a href="#">2 calle 51-52 zona 2 de Mixco Colonia Molino de las Flores.</a>
-                    </span>
-                </div>
-          
-            <article class="links-networks">
-                <a href="#"><i class="ri-facebook-circle-line"></i></a>
-                <a href="#"><i class="ri-instagram-line"></i></a>
-                <a href="#"><i class="ri-whatsapp-line"></i></a>
-            </article>
-            </div>
-          </div>
-        </div>
-      </nav>
+         <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+            </button>
         <!-- ----------->
+
         
     </header>
 
@@ -173,5 +144,6 @@
         <script src="boton-up.js"></script>
         <script src="main.js"></script>
         <script src="script.js"></script>
+        <script src="modules.js" type="module"></script>
 </body>
 </html>
