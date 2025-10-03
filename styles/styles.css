@@ -374,7 +374,6 @@ header .nav .nav-icon{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    
 }
 .banner-us::before{
     position: absolute;
@@ -388,6 +387,9 @@ header .nav .nav-icon{
 .banner-us .us-text{
     width: 70%;
     z-index: 2;
+}
+.banner-us .us-text figure img{
+    display: none;
 }
 .banner-us .us-text .container-text-us{
     width: 50%;
@@ -418,44 +420,8 @@ header .nav .nav-icon{
     font-weight: 100;
 }
 
-/*------    responsive-banner-us    -----*/
-.section-responsive-us{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-.section-responsive-us .us-responsive{
-    width: 100%;
-    padding: 1rem .5rem;
-    display: flex;
-    flex-direction: column;
-}
-.section-responsive-us .us-responsive figure{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-.section-responsive-us .us-responsive figure img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.section-responsive-us .us-responsive .container-text h2{
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: #144c68;
-    padding: .5rem 0px;
-}
-.section-responsive-us .us-responsive .container-text p{
-    font-size: 1.1rem;
-    color: #144c68;
-    padding: 1rem 0px;
-    font-weight: 100;
-    text-align: left;
-}
+
+
 
 /*-------       banner-description      --------*/
 .banner-description{
@@ -1077,9 +1043,6 @@ footer #ir_arriba_boton button:hover{
 }
 
 
-
-
-
 /*------    container-box   ------*/
 @media (max-width: 1075px){
     .banner-service .container-box{
@@ -1092,7 +1055,6 @@ footer #ir_arriba_boton button:hover{
 @media(max-width: 722px){
     .banner-service hr{
     width: 20%;
-;
 }
 }
 @media (max-width: 879px){
@@ -1142,12 +1104,44 @@ footer #ir_arriba_boton button:hover{
 
 /*------    section-us-responsive   ------*/
 @media(max-width: 670px){
+        /*------    responsive-banner-us    -----*/
     .banner-us{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: none;
+    }
+    .banner-us::before{
         display: none;
     }
-    .section-responsive-us{
+    .banner-us .us-text .container-text-us{
+        width: 100%;
+        padding: 1rem;
+       background-color: white;
+    }
+    .banner-us .us-text{
+        width: 100%;
+        padding: 1rem .5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-us .us-text figure{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .banner-us .us-text figure img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         display: flex;
     }
+    .banner-us .us-text .container-text-us h2{
+        font-size: 3rem;
+    }
+
 }
 
 
