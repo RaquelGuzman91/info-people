@@ -946,6 +946,7 @@ footer #ir_arriba_boton button:hover{
     .hamburger-inner::before,
     .hamburger-inner::after {
     background-color: white !important;
+    height: 2px !important; /* Valor original suele ser 4px */
     }
     header .nav .nav-icon{
         display: flex;
