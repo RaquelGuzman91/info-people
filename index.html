@@ -41,9 +41,9 @@
                 <li class="menu_item"><a class="desplazar menu_link" href="#contacto" rel="noopener noreferrer" target="_self">contacto</a></li>
 
                 <ul class="nav-icon">
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                    <li><a href="https://www.facebook.com/tuUsuarioFacebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/tuUsuarioFacebook"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="mailto:rakelguzman91@gmail.com?subject=Solicitud%20de%20información"><i class="fa-regular fa-envelope"></i></a></li>
                 </ul>
             </ul>
         </article>
@@ -74,7 +74,7 @@
             <a class="contact-button desplazar button-index" href="#contacto" rel="noopener noreferrer" target="_self">contacto</a>
         </article>
         <article class="icon-float">
-            <a href="#" rel="noopener noreferrer" target="_self"><i class="ri-whatsapp-line"></i></a>
+            <a href="https://wa.me/50247764240?text=Hola,%20quiero%20más%20información%20sobre%20tu%20servicio" target="_blank"><i class="ri-whatsapp-line"></i></a>
         </article>
     </section>
     
@@ -319,8 +319,8 @@
                 <div class="text">
                     <h2>oficinas centrales</h2>
                     <p>2 calle 51-52 zona 2 de Mixco Colonia Molino de las Flores.</p>
-                    <a href="#">infopeople.servicios@gmail.org</a>
-                    <a href="#">telefono: (502+) 5597 - 2311</a>
+                    <a href="mailto:rakelguzman91@gmail.com?subject=Solicitud%20de%20información" >infopeople.servicios@gmail.org</a>
+                    <a href="tel:+50247764240">telefono: (502+) 5597 - 2311</a>
                 </div>
             </article>
        </section>
@@ -331,17 +331,17 @@
        <section id="contacto" class="section-form">
         <h3>Brindamos confianza</h3>
         <article class="container-form" >
-            <form action="">
+            <form id="contact-form" action="https://formspree.io/f/maqpqgvq" method="POST">
                 <div class="container-input">
                     <div class="inputs">
                         <label class="label-text" for="">Nombre*</label>
-                        <input id="form-input" type="text" placeholder="" inputmode="text">
+                        <input id="form-input" type="text" name="nombre" placeholder="" inputmode="text">
                         <label class="label-text" for="">Apellido*</label>
-                        <input id="form-input" type="text" placeholder="" inputmode="text">
+                        <input id="form-input" type="text" name="apellido" placeholder="" inputmode="text">
                     </div>
                     <div class="inputs">
                         <label class="label-text" for="">Email*</label>
-                        <input id="form-input" type="email" placeholder="" inputmode="email">
+                        <input id="form-input" type="email" name="correo" placeholder="" inputmode="email">
                         <label  class="label-text" for="">Telefono*</label>
                         <input id="form-input" type="tel" name="telefono" pattern="\d{8}" maxlength="8" required placeholder="" inputmode="tel">
                        
@@ -354,43 +354,43 @@
                     <div class="check-text">
                         <div class="checkbox-text">
                             <label class="main" for="">
-                                <input class="mycheck" type="checkbox" name="my-checkbox" id="opt-in">
+                                <input class="mycheck" type="checkbox" name="servicio de outsorsing" id="opt-in">
                                 <span class="checkbox-container">Servicio de outsoursing</span>
                             </label>
                         </div>
                         <div class="checkbox-text">
                             <label class="main" for="">
-                                <input class="mycheck" type="checkbox" name="my-checkbox" id="opt-in">
+                                <input class="mycheck" type="checkbox" name="servicio de reclutamiento" id="opt-in">
                                 <span class="checkbox-container">Servicio de reclutamiento</span>
                             </label>
                         </div>
                         <div class="checkbox-text">
                             <label class="main" for="">
-                                <input class="mycheck" type="checkbox" name="my-checkbox" id="opt-in">
+                                <input class="mycheck" type="checkbox" name="head hourting de personal" id="opt-in">
                                 <span class="checkbox-container">Head hourting de personal</span>
                             </label>
                         </div>
                         <div class="checkbox-text">
                             <label class="main" for="">
-                                <input class="mycheck" type="checkbox" name="my-checkbox" id="opt-in">
+                                <input class="mycheck" type="checkbox" name="capacitaciones de personal" id="opt-in">
                                 <span class="checkbox-container">Capacitaciones de personal</span>
                             </label>
                         </div>
                         <div class="checkbox-text">
                             <label class="main" for="">
-                                <input class="mycheck" type="checkbox" name="my-checkbox" id="opt-in">
+                                <input class="mycheck" type="checkbox" name="respaldo de seguridad" id="opt-in">
                                 <span class="checkbox-container">Respaldo de seguridad</span>
                             </label>
                         </div>
                         <div class="checkbox-text">
                             <label class="main" for="">
-                                <input class="mycheck" type="checkbox" name="my-checkbox" id="opt-in">
+                                <input class="mycheck" type="checkbox" name="servicio outplacement" id="opt-in">
                                 <span class="checkbox-container">Servicio outplacement</span>
                             </label>
                         </div>
                         <div class="checkbox-text">
                             <label class="main" for="">
-                                <input class="mycheck" type="checkbox" name="my-checkbox" id="opt-in">
+                                <input class="mycheck" type="checkbox" name="otros" id="opt-in">
                                 <span class="checkbox-container">Otros</span>
                             </label>
                         </div>
@@ -400,12 +400,57 @@
                 <!-- mensaje ------>
                 
                     <label class="title-message" for="text">Mensaje</label>
-                    <textarea name="" id="" rows="3" ></textarea>
+                    <textarea name="message" id="" rows="3" ></textarea>
    
                    <input class="button-message" type="submit" value="Enviar" class=""> 
-               
-                                    
+                                            
             </form>
+
+            <!------- -->
+            <!-- Modal oculto -->
+            <div id="thankyou-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>¡Gracias!</h2>
+                <p>Tu mensaje ha sido enviado correctamente. Te responderemos pronto.</p>
+            </div>
+            </div>
+            <!------ -->
+            <script>
+                const form = document.getElementById('contact-form');
+                const modal = document.getElementById('thankyou-modal');
+                const closeBtn = document.querySelector('.close');
+
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const data = new FormData(form);
+
+                    const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                    form.reset(); // Limpia el formulario
+                    modal.style.display = 'block'; // Muestra el modal
+                    } else {
+                    alert("Hubo un problema al enviar tu mensaje. Intenta de nuevo.");
+                    }
+                });
+
+                // Cerrar modal al hacer clic en la X
+                closeBtn.onclick = function() {
+                    modal.style.display = 'none';
+                }
+
+                // Cerrar modal al hacer clic fuera del contenido
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                    modal.style.display = 'none';
+                    }
+                }
+                </script>
 
             <div class="text-column">
                 <h2>Recibe un presupuesto</h2>
@@ -422,9 +467,9 @@
                     <a href="#">&copy;Diseño web en Guatemala - 2025</a>
                 </article>
                 <article class="icons">
-                    <a href="#"><i class="ri-facebook-circle-line"></i></a>
-                    <a href="#"><i class="ri-whatsapp-line"></i></a>
-                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="https://www.facebook.com/tuUsuarioFacebook" target="_blank"><i class="ri-facebook-fill"></i></a>
+                    <a  href="mailto:rakelguzman91@gmail.com?subject=Solicitud%20de%20información"><i class="ri-mail-line"></i>></i></a>
+                    <a href="https://www.instagram.com/tuUsuarioFacebook" target="_blank"><i class="ri-instagram-line"></i></a>
                 </article>
             </section>
 
